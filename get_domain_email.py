@@ -16,7 +16,7 @@ def get_most_frequent_email_domain():
     data = pd.DataFrame(profiles)
     data['domain'] = data['mail'].str.split('@', expand=True).iloc[:,1]
     most_frequent_domain = data['domain'].mode()[0]
-    # print('done')
+    print('done')
     return most_frequent_domain
 
 
